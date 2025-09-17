@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maham Malik | Web Developer</title>
+  <title>Maham Mubarik | Frontend Developer</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,10 +15,9 @@
   <header id="header">
     <div class="container">
       <div class="logo">MM</div>
+      <div class="dark-mode-toggle"><i class="fas fa-moon"></i></div>
       <nav>
-        <div class="hamburger">
-          <i class="fas fa-bars"></i>
-        </div>
+        <div class="hamburger"><i class="fas fa-bars"></i></div>
         <ul class="nav-menu">
           <li><a href="#hero">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -28,32 +28,32 @@
       </nav>
     </div>
   </header>
+
   <!-- Hero Section -->
   <section id="hero">
     <div class="container hero-content">
-      <div class="hero-text">
+      <div class="hero-text" data-aos="fade-right">
         <h1>Hi, I'm Maham Mubarik</h1>
-        <p>A passionate web developer creating beautiful and functional websites.</p>
+        <p></p> <!-- Typed text effect inserted by JS -->
         <a href="#projects" class="btn">View My Work</a>
       </div>
-      <div class="hero-image">
+      <div class="hero-image" data-aos="fade-left">
         <img src="assests/images/profilepicture.jpg" alt="Maham Mubarik">
+      </div>
     </div>
   </section>
+
   <!-- About Section -->
   <section id="about" class="section">
     <div class="container">
-      <div class="section-title">
+      <div class="section-title" data-aos="fade-up">
         <h2>About Me</h2>
       </div>
-      <div class="about-content">
+      <div class="about-content" data-aos="fade-up">
         <div class="about-text">
-          <p>Hello! I'm Maham, a web developer based in Pakistan. I have a passion for creating intuitive, dynamic
-            user experiences with clean, efficient code.</p>
-          <p>With over 2 years of experience in web development, I've worked on various projects ranging from small
-            business websites to complex web applications. I'm constantly learning and adapting to new technologies to
-            stay at the forefront of web development.</p>
-          <p>When I'm not coding, you can find me hiking, reading, or experimenting with photography.</p>
+          <p>Hi! I'm Maham, a frontend developer and computer science student, passionate about creating modern,
+            responsive, and interactive websites. I enjoy building projects with HTML, CSS, JavaScript, React, and
+            continuously learning to craft seamless web experiences across all devices.</p>
         </div>
         <div class="about-image">
           <img src="assests/images/profilepicture.jpg" alt="About Me">
@@ -61,100 +61,143 @@
       </div>
     </div>
   </section>
+
   <!-- Skills Section -->
   <section id="skills" class="section">
     <div class="container">
-      <div class="section-title">
+      <div class="section-title" data-aos="fade-up">
         <h2>My Skills</h2>
       </div>
-      <div class="skills-container">
+      <div class="skills-container" data-aos="fade-up">
         <div class="skill">
           <i class="fab fa-html5"></i>
           <h3>HTML5</h3>
-          <p>Semantic markup, accessibility, and modern HTML features.</p>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="95%"></div>
+          </div>
         </div>
         <div class="skill">
           <i class="fab fa-css3-alt"></i>
           <h3>CSS3</h3>
-          <p>Responsive design, Flexbox, Grid, and CSS animations.</p>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="90%"></div>
+          </div>
         </div>
         <div class="skill">
           <i class="fab fa-js"></i>
           <h3>JavaScript</h3>
-          <p>ES6+, DOM manipulation, and modern JS frameworks.</p>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="85%"></div>
+          </div>
         </div>
         <div class="skill">
           <i class="fab fa-react"></i>
           <h3>React</h3>
-          <p>Component-based architecture and state management.</p>
+          <div class="skill-bar">
+            <div class="skill-fill" data-width="80%"></div>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
   <!-- Projects Section -->
   <section id="projects" class="section">
     <div class="container">
-      <div class="section-title">
+      <div class="section-title" data-aos="fade-up">
         <h2>My Projects</h2>
       </div>
-      <div class="projects-container">
-        <div class="project">
+
+      <!-- Filter Buttons -->
+      <div class="project-filters" data-aos="fade-up">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="react">React</button>
+        <button data-filter="js">JavaScript</button>
+        <button data-filter="html">HTML/CSS</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-container" data-aos="fade-up">
+
+        <!-- E-commerce Website -->
+        <div class="project js">
           <div class="project-image">
-            <img src="assests/images/ecommerce-website.jpg" alt="Project 1">
+            <img src="/assests/images/ecommerce-website.jpg" alt="E-commerce Website">
           </div>
           <div class="project-info">
             <h3>E-commerce Website</h3>
-            <p>A fully responsive e-commerce platform with product filtering and cart functionality.</p>
+            <span class="project-tag js">📜 JavaScript</span>
+            <p>A responsive e-commerce frontend with product listings and cart functionality.</p>
+            <div class="project-links">
+              <a href="https://Maham2104.github.io/ecommerce-website/" target="_blank" class="btn">Live Demo</a>
+              <a href="https://github.com/Maham2104/ecommerce-website" target="_blank" class="btn secondary">GitHub</a>
+            </div>
           </div>
         </div>
-        <div class="project">
+
+        <!-- Mood Tracker -->
+        <div class="project js">
           <div class="project-image">
-            <img src="assests/images/taskmanagement.jpg" alt="Project 2">
+            <img src="./assests/images/moodtracker.jpeg" alt="Mood Tracker">
           </div>
           <div class="project-info">
-            <h3>Task Management App</h3>
-            <p>A drag-and-drop task management application with local storage.</p>
+            <h3>Mood Tracker</h3>
+            <span class="project-tag js">📜 JavaScript</span>
+            <p>A simple JavaScript app to track daily moods and save them in local storage.</p>
+            <div class="project-links">
+              <a href="https://Maham2104.github.io/mood-tracker-app/" target="_blank" class="btn">Live Demo</a>
+              <a href="https://github.com/Maham2104/mood-tracker-app" target="_blank" class="btn secondary">GitHub</a>
+            </div>
           </div>
         </div>
-        <div class="project">
+
+        <!-- Dynamic Profile Card -->
+        <div class="project react">
           <div class="project-image">
-            <img src="assests/images/travelblog.jpeg" alt="Project 3">
+            <img src="./assests/images/profile-card.jpg" alt="Dynamic Profile Card">
           </div>
           <div class="project-info">
-            <h3>Travel Blog</h3>
-            <p>A responsive travel blog with dynamic content loading and image galleries.</p>
+            <h3>Dynamic Profile Card</h3>
+            <span class="project-tag react">⚛ React</span>
+            <p>An interactive profile card built with React props and state management.</p>
+            <div class="project-links">
+              <a href="https://Maham2104.github.io/dynamic-profile-card/" target="_blank" class="btn">Live Demo</a>
+              <a href="https://github.com/Maham2104/dynamic-profile-card" target="_blank" class="btn secondary">GitHub</a>
+            </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
+
   <!-- Contact Section -->
   <section id="contact" class="section">
     <div class="container">
-      <div class="section-title">
+      <div class="section-title" data-aos="fade-up">
         <h2>Contact Me</h2>
       </div>
-      <div class="contact-container">
+      <div class="contact-container" data-aos="fade-up">
         <div class="contact-info">
           <h3>Get In Touch</h3>
-          <p>Feel free to reach out for collaboration or just to say hello!</p>
-          <p><i class="fas fa-envelope"></i> maham@gmail.com</p>
-          <p><i class="fas fa-phone"></i> +92 318 4564567</p>
+          <p>Let's create something amazing together—reach out anytime!</p>
+          <p><i class="fas fa-envelope"></i> mahammalikk08@gmail.com</p>
+          <p><i class="fas fa-phone"></i> +92 000 1122333</p>
           <p><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</p>
         </div>
         <div class="contact-form">
           <form id="contactForm">
             <div class="form-group">
+              <input type="text" id="name" class="form-control" placeholder=" " required>
               <label for="name">Name</label>
-              <input type="text" id="name" class="form-control" required>
             </div>
             <div class="form-group">
+              <input type="email" id="email" class="form-control" placeholder=" " required>
               <label for="email">Email</label>
-              <input type="email" id="email" class="form-control" required>
             </div>
             <div class="form-group">
+              <textarea id="message" class="form-control" placeholder=" " required></textarea>
               <label for="message">Message</label>
-              <textarea id="message" class="form-control" required></textarea>
             </div>
             <button type="submit" class="btn">Send Message</button>
           </form>
@@ -162,19 +205,22 @@
       </div>
     </div>
   </section>
+
   <!-- Footer -->
   <footer id="footer">
     <div class="container">
       <div class="social-links">
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/Maham2104" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="http://www.linkedin.com/in/maham-mubarikk-21as04" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/yourusername" target="_blank"><i class="fab fa-instagram"></i></a>
       </div>
       <p>&copy; 2025 Maham Mubarik. All rights reserved.</p>
     </div>
   </footer>
-  <script src="main.js">
-  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="main.js"></script>
 </body>
+
 </html>
